@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article - Waite.EYTS</title>
+    <!-- SEO Meta Tags - These will be dynamically updated via JavaScript -->
+    <meta name="description" content="Read our detailed article on early years education topics. Gain insights and practical strategies for early childhood development.">
+    <meta name="keywords" content="early years education, EYTS, educational resources, early childhood development">
+    <meta name="author" content="Waite.EYTS">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Blog Article - Waite.EYTS">
+    <meta property="og:description" content="Read our detailed article on early years education topics.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://waiteeyts.com/blog-article.html">
+    <meta property="og:image" content="img/article1.jpg">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to Blog Article page */
+        .article-header {
+            padding: 150px 0 60px;
+            background-color: var(--light-gray);
+        }
+        
+        .article-image-container {
+            margin-bottom: 30px;
+        }
+        
+        .article-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .article-meta {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .article-meta-item {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .article-meta-item i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .article-content {
+            margin-bottom: 40px;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            margin: 40px 0 20px;
+            color: var(--primary-color);
+        }
+        
+        .article-content h3 {
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        .share-buttons {
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .share-buttons span {
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        
+        .share-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .related-articles {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .comments-section {
+            padding: 60px 0;
+        }
+        
+        .comment {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .comment-meta h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .comment-meta span {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+        
+        .comment-content {
+            line-height: 1.7;
+        }
+        
+        .comment-form {
+            margin-top: 40px;
+        }
+        
+        .comment-form .form-control {
+            margin-bottom: 20px;
+            border-radius: 5px;
+            padding: 12px 15px;
+        }
+        
+        .author-bio {
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        
+        .author-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 767.98px) {
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Waite.EYTS Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="knowledge-hub.html">Knowledge Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="index.html#contact" class="btn book-appointment-btn">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <span class="badge bg-primary mb-3" id="article-category">Child Development</span>
+                    <h1 class="display-4 fw-bold" id="article-title">Supporting Language Development in Early Years</h1>
+                    <div class="article-meta">
+                        <div class="article-meta-item">
+                            <i class="fas fa-user"></i>
+                            <span id="article-author">Sarah Johnson</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span id="article-date">June 15, 2023</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="article-read-time">8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-content-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="article-image-container">
+                        <img src="img/article1.jpg" alt="Supporting Language Development in Early Years" class="article-image" id="article-image">
+                    </div>
+                    
+                    <div class="article-content" id="article-content">
+                        <p>Language development is a critical aspect of early childhood education, laying the foundation for future learning, social interaction, and cognitive development. In the early years, children undergo rapid language acquisition, moving from simple babbling to complex sentence structures in a relatively short period.</p>
+                        
+                        <p>This article explores effective strategies for promoting language development in young children, providing practical approaches that can be implemented in both educational settings and home environments.</p>
+                        
+                        <h2>The Importance of Language Development</h2>
+                        
+                        <p>Language skills are fundamental to a child's overall development and future academic success. Strong language abilities enable children to:</p>
+                        
+                        <ul>
+                            <li>Express their thoughts, needs, and feelings effectively</li>
+                            <li>Develop and maintain relationships with peers and adults</li>
+                            <li>Engage in collaborative play and learning activities</li>
+                            <li>Build a foundation for literacy skills, including reading and writing</li>
+                            <li>Develop critical thinking and problem-solving abilities</li>
+                        </ul>
+                        
+                        <p>Research consistently shows that children with strong language skills in the early years are better prepared for formal education and tend to achieve better academic outcomes throughout their schooling.</p>
+                        
+                        <h2>Key Strategies for Supporting Language Development</h2>
+                        
+                        <h3>1. Create a Language-Rich Environment</h3>
+                        
+                        <p>A language-rich environment provides children with numerous opportunities to hear and use language throughout the day. This can be achieved by:</p>
+                        
+                        <ul>
+                            <li>Engaging in frequent conversations with children, asking open-ended questions that encourage extended responses</li>
+                            <li>Narrating daily activities and routines, describing what you and the children are doing</li>
+                            <li>Providing a diverse range of books, stories, and printed materials</li>
+                            <li>Labeling objects and areas in the learning environment</li>
+                            <li>Using rich, varied vocabulary and introducing new words in meaningful contexts</li>
+                        </ul>
+                        
+                        <blockquote>
+                            "The single most important activity for building the knowledge required for eventual success in reading is reading aloud to children." - Becoming a Nation of Readers (1985)
+                        </blockquote>
+                        
+                        <h3>2. Engage in Responsive Interactions</h3>
+                        
+                        <p>Responsive interactions involve actively listening to children and responding in ways that acknowledge their communication attempts and extend their language. Effective approaches include:</p>
+                        
+                        <ul>
+                            <li>Following the child's lead and interests in conversations</li>
+                            <li>Responding promptly and positively to children's communication attempts</li>
+                            <li>Expanding on children's utterances by adding words or phrases</li>
+                            <li>Recasting children's incorrect grammar into correct forms without explicitly correcting them</li>
+                            <li>Using a variety of questions to stimulate thinking and language use</li>
+                        </ul>
+                        
+                        <h3>3. Incorporate Music, Rhymes, and Wordplay</h3>
+                        
+                        <p>Music, rhymes, and wordplay are powerful tools for language development, helping children develop phonological awareness, vocabulary, and memory skills. Consider:</p>
+                        
+                        <ul>
+                            <li>Singing songs and reciting nursery rhymes regularly</li>
+                            <li>Playing with language through alliteration, rhyming games, and tongue twisters</li>
+                            <li>Using finger plays and action songs that combine language with movement</li>
+                            <li>Creating opportunities for children to fill in missing words in familiar songs and rhymes</li>
+                        </ul>
+                        
+                        <h3>4. Use Storytelling and Shared Reading</h3>
+                        
+                        <p>Storytelling and shared reading experiences are invaluable for language development, exposing children to rich vocabulary, complex sentence structures, and narrative patterns. Effective practices include:</p>
+                        
+                        <ul>
+                            <li>Reading aloud to children daily, using expressive voices and gestures</li>
+                            <li>Discussing stories before, during, and after reading</li>
+                            <li>Encouraging children to retell stories in their own words</li>
+                            <li>Using props, puppets, and visual aids to enhance storytelling</li>
+                            <li>Creating opportunities for children to create and share their own stories</li>
+                        </ul>
+                        
+                        <h2>Supporting Children with Language Delays or Difficulties</h2>
+                        
+                        <p>Some children may experience delays or difficulties in language development. Early identification and intervention are crucial for these children. Consider the following approaches:</p>
+                        
+                        <ul>
+                            <li>Observe and document children's language development to identify potential concerns</li>
+                            <li>Consult with speech and language therapists for specialized support</li>
+                            <li>Adapt communication strategies to meet individual children's needs</li>
+                            <li>Use visual supports, such as pictures and gestures, to complement verbal communication</li>
+                            <li>Provide additional one-to-one language support for children who need it</li>
+                        </ul>
+                        
+                        <h2>Conclusion</h2>
+                        
+                        <p>Supporting language development in the early years requires a thoughtful, intentional approach that recognizes the importance of rich language experiences, responsive interactions, and individualized support. By implementing the strategies outlined in this article, early years educators and parents can create environments that nurture children's language development, setting them on a path to becoming confident, effective communicators.</p>
+                        
+                        <p>Remember that language development is a gradual process, and children progress at different rates. Celebrate each child's achievements and continue to provide stimulating, supportive language experiences that build on their existing skills and interests.</p>
+                    </div>
+                    
+                    <!-- Author Bio -->
+                    <div class="author-bio">
+                        <img src="img/author1.jpg" alt="Sarah Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h3>Sarah Johnson</h3>
+                            <p>Sarah is an experienced early years educator with over 15 years of experience in the field. She holds a Master's degree in Early Childhood Education and specializes in language development and literacy. Sarah is passionate about supporting educators and parents in creating optimal learning environments for young children.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <span>Share this article:</span>
+                        <a href="#" class="share-button" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-button" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-button" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="share-button" title="Share via Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Related Articles</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row" id="related-articles-container">
+                <!-- Related articles will be dynamically populated based on the current article -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="article-card">
+                        <img src="img/article2.jpg" alt="Creating Engaging Learning Environments" class="img-fluid article-image">
+                        <div class="article-content">
+                            <span class="badge bg-success mb-2">Learning Environment</span>
+                            <h3>Creating Engaging Learning Environments</h3>
+                            <p>How to design physical spaces that stimulate curiosity, creativity, and exploration in early years settings.</p>
+                            <a href="blog-article.html?id=2" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="article-card">
+                        <img src="img/article5.jpg" alt="Supporting Social and Emotional Development" class="img-fluid article-image">
+                        <div class="article-content">
+                            <span class="badge bg-primary mb-2">Child Development</span>
+                            <h3>Supporting Social and Emotional Development</h3>
+                            <p>Strategies for nurturing children's social skills, emotional intelligence, and well-being in early years settings.</p>
+                            <a href="blog-article.html?id=5" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="article-card">
+                        <img src="img/article3.jpg" alt="The Role of Play in Early Learning" class="img-fluid article-image">
+                        <div class="article-content">
+                            <span class="badge bg-info mb-2">Curriculum</span>
+                            <h3>The Role of Play in Early Learning</h3>
+                            <p>Understanding the importance of play-based learning and how to effectively incorporate it into your curriculum.</p>
+                            <a href="blog-article.html?id=3" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title">Comments</h2>
+                    <div class="section-divider mb-4"></div>
+                    
+                    <div class="comments-container">
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="img/user1.jpg" alt="User Avatar" class="comment-avatar">
+                                <div class="comment-meta">
+                                    <h4>Emma Thompson</h4>
+                                    <span>June 18, 2023</span>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p>Thank you for this insightful article! I've been struggling with how to better support language development in my preschool classroom, and these strategies are very practical. I especially appreciate the section on supporting children with language delays, as I have a few students who could benefit from these approaches.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="img/user2.jpg" alt="User Avatar" class="comment-avatar">
+                                <div class="comment-meta">
+                                    <h4>Michael Chen</h4>
+                                    <span>June 20, 2023</span>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p>As a parent of a 3-year-old, I found this article extremely helpful. We've been incorporating more songs and rhymes into our daily routine, and I've noticed a significant improvement in my daughter's vocabulary and sentence structure. Would love to see more articles on how parents can support early language development at home!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comment Form -->
+                    <div class="comment-form">
+                        <h3>Leave a Comment</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" rows="5" placeholder="Your Comment" required></textarea>
+                            <button type="submit" class="btn btn-primary mt-3">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Stay Updated</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">Subscribe to our newsletter to receive the latest updates, resources, and insights on early years education.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3>Waite.EYTS</h3>
+                    <p>Transforming early years education through expert training, resources, and consultancy services.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="knowledge-hub.html">Knowledge Hub</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Webinars</a></li>
+                        <li><a href="index.html#services">Consultancy</a></li>
+                        <li><a href="index.html#services">Digital Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Education Street, Learning City, LC1 2ED</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+44 123 456 7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@waiteeyts.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>&copy; 2023 Waite.EYTS. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    <!-- Blog Article Specific JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get article ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id') || '1'; // Default to article 1 if no ID provided
+            
+            // In a real application, you would fetch the article data from a database or API
+            // For this demo, we'll use a simple switch statement to show different content based on the ID
+            
+            // This would be replaced with actual data in a real application
+            let articleData;
+            
+            switch(articleId) {
+                case '1':
+                    // Article data is already in the HTML as the default
+                    break;
+                case '2':
+                    // Update page with article 2 data
+                    document.getElementById('article-title').textContent = 'Creating Engaging Learning Environments';
+                    document.getElementById('article-category').textContent = 'Learning Environment';
+                    document.getElementById('article-category').className = 'badge bg-success mb-3';
+                    document.getElementById('article-author').textContent = 'David Wilson';
+                    document.getElementById('article-date').textContent = 'June 22, 2023';
+                    document.getElementById('article-read-time').textContent = '10 min read';
+                    document.getElementById('article-image').src = 'img/article2.jpg';
+                    document.getElementById('article-image').alt = 'Creating Engaging Learning Environments';
+                    
+                    // Update meta tags
+                    document.title = 'Creating Engaging Learning Environments - Waite.EYTS';
+                    document.querySelector('meta[name="description"]').setAttribute('content', 'Learn how to design physical spaces that stimulate curiosity, creativity, and exploration in early years settings.');
+                    document.querySelector('meta[property="og:title"]').setAttribute('content', 'Creating Engaging Learning Environments - Waite.EYTS');
+                    document.querySelector('meta[property="og:description"]').setAttribute('content', 'Learn how to design physical spaces that stimulate curiosity, creativity, and exploration in early years settings.');
+                    document.querySelector('meta[property="og:image"]').setAttribute('content', 'img/article2.jpg');
+                    
+                    // In a real application, you would update the article content as well
+                    // For this demo, we'll keep the same content
+                    break;
+                case '3':
+                    // Update page with article 3 data
+                    document.getElementById('article-title').textContent = 'The Role of Play in Early Learning';
+                    document.getElementById('article-category').textContent = 'Curriculum';
+                    document.getElementById('article-category').className = 'badge bg-info mb-3';
+                    document.getElementById('article-author').textContent = 'Emily Parker';
+                    document.getElementById('article-date').textContent = 'June 28, 2023';
+                    document.getElementById('article-read-time').textContent = '7 min read';
+                    document.getElementById('article-image').src = 'img/article3.jpg';
+                    document.getElementById('article-image').alt = 'The Role of Play in Early Learning';
+                    
+                    // Update meta tags
+                    document.title = 'The Role of Play in Early Learning - Waite.EYTS';
+                    document.querySelector('meta[name="description"]').setAttribute('content', 'Understanding the importance of play-based learning and how to effectively incorporate it into your curriculum.');
+                    document.querySelector('meta[property="og:title"]').setAttribute('content', 'The Role of Play in Early Learning - Waite.EYTS');
+                    document.querySelector('meta[property="og:description"]').setAttribute('content', 'Understanding the importance of play-based learning and how to effectively incorporate it into your curriculum.');
+                    document.querySelector('meta[property="og:image"]').setAttribute('content', 'img/article3.jpg');
+                    
+                    // In a real application, you would update the article content as well
+                    // For this demo, we'll keep the same content
+                    break;
+                // Add cases for other articles as needed
+            }
+            
+            // Update related articles based on current article
+            // In a real application, you would dynamically generate related articles based on tags, categories, etc.
+            // For this demo, we'll keep the default related articles
+        });
+    </script>
+</body>
+</html>
