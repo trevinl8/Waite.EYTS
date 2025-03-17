@@ -7,6 +7,11 @@
 */
 
 /* Global Styles */
+/* Ensure all images are responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
 :root {
     --primary-color: #2a29a5;
     --secondary-color: #17d492;
@@ -126,7 +131,7 @@ section {
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 60px;
     transition: var(--transition);
 }
 
@@ -229,11 +234,15 @@ section {
 
 .hero-image-column {
     z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    max-width: 100%;
+    height: auto;
 }
 
 .hero-image:hover {
@@ -343,6 +352,7 @@ section {
 .article-image {
     height: 200px;
     object-fit: cover;
+    width: 100%;
 }
 
 .article-content {
@@ -735,6 +745,23 @@ section {
     .timeline-item:nth-child(even) .timeline-icon {
         left: 10px;
     }
+    
+    /* Navbar adjustments for tablet */
+    .navbar-brand img {
+        height: 50px;
+    }
+    
+    .book-appointment-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    /* Service cards adjustments */
+    .service-card, 
+    .feature-card, 
+    .article-card {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -746,14 +773,64 @@ section {
         padding: 10px 0;
     }
     
+    .navbar-brand img {
+        height: 40px;
+    }
+    
     .hero-section {
         padding: 130px 0 60px;
     }
     
+    .hero-text-column h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text-column p {
+        font-size: 1rem;
+    }
+    
+    .hero-btns .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .hero-btns .btn.ms-2 {
+        margin-left: 0 !important;
+    }
+    
+    /* Adjust section titles and descriptions */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    /* Adjust card layouts */
+    .service-card, 
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .service-icon,
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i,
+    .feature-icon i {
+        font-size: 1.5rem;
+    }
+    
+    /* Contact section adjustments */
     .contact-info {
         margin-bottom: 30px;
     }
     
+    /* Footer adjustments */
     .footer {
         padding: 50px 0 20px;
     }
@@ -761,6 +838,65 @@ section {
     .footer .col-lg-4,
     .footer .col-lg-2 {
         margin-bottom: 30px;
+    }
+    
+    /* Newsletter form adjustments */
+    .newsletter-form .input-group {
+        flex-direction: column;
+    }
+    
+    .newsletter-form .form-control {
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form .btn {
+        border-radius: 30px;
+        width: 100%;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 575.98px) {
+    .navbar-brand img {
+        height: 35px;
+    }
+    
+    .hero-section {
+        padding: 120px 0 50px;
+    }
+    
+    .hero-text-column h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* Adjust timeline for very small screens */
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline:before {
+        left: 20px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-icon,
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: 0;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .timeline-icon i {
+        font-size: 1rem;
+    }
+    
+    /* Adjust article cards */
+    .article-image {
+        height: 180px;
+    }
+    
+    .article-content h3 {
+        font-size: 1.1rem;
     }
 }
 

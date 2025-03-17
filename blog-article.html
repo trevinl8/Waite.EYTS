@@ -100,6 +100,7 @@
             margin: 40px 0;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .share-buttons span {
@@ -215,6 +216,26 @@
                 margin-right: 0;
                 margin-bottom: 20px;
             }
+            
+            .share-buttons {
+                justify-content: center;
+                margin: 30px 0;
+            }
+            
+            .share-buttons span {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .article-meta {
+                justify-content: center;
+            }
+            
+            .article-image {
+                height: auto;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -223,7 +244,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Waite.EYTS Logo">
+                <img src="img/logos/logo150.png" alt="Waite.EYTS Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -261,7 +282,7 @@
                     <div class="article-meta">
                         <div class="article-meta-item">
                             <i class="fas fa-user"></i>
-                            <span id="article-author">Sarah Johnson</span>
+                            <span id="article-author">Richard Waite</span>
                         </div>
                         <div class="article-meta-item">
                             <i class="fas fa-calendar-alt"></i>
@@ -283,7 +304,7 @@
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="article-image-container">
-                        <img src="img/article1.jpg" alt="Supporting Language Development in Early Years" class="article-image" id="article-image">
+                        <img src="img/knowledgehub/1.png" alt="Supporting Language Development in Early Years" class="article-image" id="article-image">
                     </div>
                     
                     <div class="article-content" id="article-content">
@@ -379,10 +400,10 @@
                     
                     <!-- Author Bio -->
                     <div class="author-bio">
-                        <img src="img/author1.jpg" alt="Sarah Johnson" class="author-avatar">
+                        <img src="img/richard.jpg" alt="Sarah Johnson" class="author-avatar">
                         <div class="author-info">
-                            <h3>Sarah Johnson</h3>
-                            <p>Sarah is an experienced early years educator with over 15 years of experience in the field. She holds a Master's degree in Early Childhood Education and specializes in language development and literacy. Sarah is passionate about supporting educators and parents in creating optimal learning environments for young children.</p>
+                            <h3>Richard Waite</h3>
+                            <p>Richard is an experienced early years educator with over 15 years of experience in the field. She holds a Master's degree in Early Childhood Education and specializes in language development and literacy. Sarah is passionate about supporting educators and parents in creating optimal learning environments for young children.</p>
                         </div>
                     </div>
                     
@@ -412,7 +433,7 @@
                 <!-- Related articles will be dynamically populated based on the current article -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="article-card">
-                        <img src="img/article2.jpg" alt="Creating Engaging Learning Environments" class="img-fluid article-image">
+                        <img src="img/knowledgehub/1.png" alt="Creating Engaging Learning Environments" class="img-fluid article-image">
                         <div class="article-content">
                             <span class="badge bg-success mb-2">Learning Environment</span>
                             <h3>Creating Engaging Learning Environments</h3>
@@ -424,7 +445,7 @@
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="article-card">
-                        <img src="img/article5.jpg" alt="Supporting Social and Emotional Development" class="img-fluid article-image">
+                        <img src="img/knowledgehub/2.png" alt="Supporting Social and Emotional Development" class="img-fluid article-image">
                         <div class="article-content">
                             <span class="badge bg-primary mb-2">Child Development</span>
                             <h3>Supporting Social and Emotional Development</h3>
@@ -436,7 +457,7 @@
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="article-card">
-                        <img src="img/article3.jpg" alt="The Role of Play in Early Learning" class="img-fluid article-image">
+                        <img src="img/knowledgehub/3.png" alt="The Role of Play in Early Learning" class="img-fluid article-image">
                         <div class="article-content">
                             <span class="badge bg-info mb-2">Curriculum</span>
                             <h3>The Role of Play in Early Learning</h3>
