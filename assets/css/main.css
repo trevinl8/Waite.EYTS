@@ -971,8 +971,29 @@ line-height: normal;
     }
     
     .sec-space {
-        margin-top: 100px;
-        margin-bottom: 100px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .navbar {
+        padding: 15px;
+    }
+    
+    .navbar-brand {
+        font-size: 28px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+    }
+    
+    .service-card {
+        padding: 30px;
+    }
+    
+    .podcast-links a {
+        display: block;
+        margin-bottom: 10px;
     }
 }
 
@@ -1004,6 +1025,55 @@ line-height: normal;
     .footer-section {
         padding: 40px 0 20px;
     }
+    
+    .profile-info {
+        padding-left: 20px;
+    }
+    
+    .container-box {
+        padding: 30px;
+    }
+    
+    .trans-card {
+        padding: 20px;
+    }
+    
+    .contact-box {
+        padding: 30px;
+    }
+    
+    .webinar-date, .webinar-time {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .d-flex.justify-content-between {
+        flex-direction: column;
+    }
+    
+    .podcast-icon-container {
+        height: 80px;
+    }
+    
+    .podcast-image-container {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    /* Improve subscribe section alignment on medium screens */
+    .subscribe-section .newsletter-form .input-group {
+        flex-direction: column;
+    }
+    
+    .subscribe-section .newsletter-input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .subscribe-section .btn-cta {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1028,7 +1098,97 @@ line-height: normal;
     }
     
     .sec-space {
-        margin-top: 70px;
-        margin-bottom: 70px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
+    
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar-brand {
+        font-size: 24px;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .article-meta span {
+        display: block;
+    }
+    
+    .article-text h2 {
+        font-size: 24px;
+    }
+    
+    .article-text h3 {
+        font-size: 20px;
+    }
+    
+    .article-author-bio .row {
+        flex-direction: column;
+    }
+    
+    .article-author-bio .col-md-2 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .article-author-bio img {
+        max-width: 80px;
+    }
+    
+    /* Improve podcast layout on small screens */
+    .podcast-icon-container {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .podcast-date {
+        font-size: 14px;
+    }
+    
+    /* Ensure images are responsive */
+    .hero-img, .choose-img, .article-featured-image img, .article-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve navigation for mobile */
+    .navbar-toggler {
+        padding: 5px;
+    }
+    
+    /* Ensure subscriber sections are properly centered */
+    .subscribe-section .col-md-6 {
+        padding: 0 15px;
+    }
+    
+    /* Improve footer on small screens */
+    .footer-heading {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Fix for navbar toggle button */
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* Ensure images have alt text for accessibility */
+img:not([alt]) {
+    outline: 2px solid red;
 }
