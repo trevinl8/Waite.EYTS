@@ -13,6 +13,9 @@
 
         <!-- Boostrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <!-- Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,9 +24,14 @@
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
+        <!-- Scroll to Top Button -->
+        <div class="scroll-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        
         <div class="container">
             <!-- Navigation Bar -->
-            <nav class="navbar sticky-top navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Waite EYTS</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,53 +40,53 @@
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Knowledge Hub
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <li><a class="dropdown-item" href="#">Articles</a></li>
-                          <li><a class="dropdown-item" href="#">Webinars</a></li>
-                          <li><a class="dropdown-item" href="#">Podcasts</a></li>
+                          <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+                          <li><a class="dropdown-item" href="webinars.html">Webinars</a></li>
+                          <li><a class="dropdown-item" href="podcasts.html">Podcasts</a></li>
                           <li><a class="dropdown-item" href="#">Digital Library</a></li>
                         </ul>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                       </li>
                       <form class="container-fluid justify-content-end">
-                        <button class="btn btn-cta me-2" type="button">Book an Appointment</button>
+                        <a href="" class="btn btn-cta me-2" type="button">Book an Appointment</a>
                       </form>
                     </ul>
                   </div>
                 </div>
               </nav>
         </div>
-        <section class="hero-section">
+        <section class="hero-section" id="home">
             <div class="container">
             <div class="row section-content">
                 <div class="col-lg-6">
                     <h1 class="hero-title">Transforming Early Years Education</h1>
                     <p class="hero-subtitle">Waite.EYTS provides expert training, resources, and consultancy services to help early years educators deliver exceptional learning experiences.</p>  
-                    <button class="btn btn-cta">Explore Our Services</button>
+                    <a href="#services" class="btn btn-cta">Explore Our Services</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="../Waite.EYTS/assets/imgs/hero-img.png" alt="Hero Image" class="img-fluid hero-img">
+                    <img src="./assets/imgs/hero-img.png" alt="Hero Image" class="img-fluid hero-img">
                 </div>
             </div>
             </div>
         </section>
 
         <!-- About Section-->
-         <section class="about-section sec-space">
+         <section class="about-section sec-space" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -120,7 +128,7 @@
         </section>
 
         <!-- Service Section-->
-        <section class="service-section sec-space">
+        <section class="service-section sec-space" id="services">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -159,7 +167,7 @@
         </section>
 
         <!-- Why Choose Section-->
-          <section class="service-section sec-space">
+          <section class="why-choose-section sec-space" id="why-choose">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -170,7 +178,7 @@
                 <div class="row section-content">
                   <div class="row">
                     <div class="col-lg-6">
-                      <img src="../Waite.EYTS/assets/imgs/why-choose.png" alt="Hero Image" class="img-fluid choose-img">
+                      <img src="./assets/imgs/why-choose.png" alt="Hero Image" class="img-fluid choose-img">
                     </div>
                     <div class="col-lg-6">
                       <div class="trans-card">
@@ -199,7 +207,7 @@
                   </section>
 
         <!-- Contact Section-->
-    <section class="service-section sec-space">
+    <section class="contact-section sec-space" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -217,8 +225,8 @@
                       <div class="row mt-5">
                         <h4 class="contact-title">Social Media</h4>
                         <ul>
-                          <li class="social-icons"><a href="#"><img src="../Waite.EYTS/assets/imgs/vecs/FB.svg" alt="Facebook"></a></li>
-                          <li class="social-icons"><a href="#"><img src="../Waite.EYTS/assets/imgs/vecs/Insta.svg" alt="LinkedIn"></a></li>
+                          <li class="social-icons"><a href="#"><img src="./assets/imgs/vecs/FB.svg" alt="Facebook"></a></li>
+                          <li class="social-icons"><a href="#"><img src="./assets/imgs/vecs/Insta.svg" alt="LinkedIn"></a></li>
                         </ul>
                         </div>
                     </div>
@@ -243,13 +251,54 @@
                   </div>
                   </section>
 
-
-
-
-
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h3 class="footer-heading">Waite EYTS</h3>
+                        <p class="footer-text">Dedicated to excellence in early years technology integration. We provide expert training, resources, and consultancy services.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><img src="./assets/imgs/vecs/FB.svg" alt="Facebook"></a>
+                            <a href="#" class="social-link"><img src="./assets/imgs/vecs/Insta.svg" alt="Instagram"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home" class="footer-link">Home</a></li>
+                            <li><a href="#about" class="footer-link">About</a></li>
+                            <li><a href="#services" class="footer-link">Services</a></li>
+                            <li><a href="#contact" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Lunch and Learn Webinars</a></li>
+                            <li><a href="#" class="footer-link">Consultancy Services</a></li>
+                            <li><a href="#" class="footer-link">Digital Resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Newsletter</h4>
+                        <p class="footer-text">Subscribe to our newsletter for the latest updates and resources.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-cta">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright-text">© 2025 Waite EYTS. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="assets/js/main.js" async defer></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
