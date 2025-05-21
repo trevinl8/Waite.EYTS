@@ -103,7 +103,7 @@ function setupAnimations() {
     });
     
     // Observe all elements with animation classes
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-up, .zoom-in').forEach(element => {
         observer.observe(element);
     });
 }
@@ -113,7 +113,11 @@ function setupAnimations() {
  */
 function addAnimationClasses() {
     // Section titles and subtitles
-    document.querySelectorAll('.section-title, .section-subtitle').forEach(element => {
+    document.querySelectorAll('.section-title').forEach(element => {
+        element.classList.add('zoom-in');
+    });
+    
+    document.querySelectorAll('.section-subtitle').forEach(element => {
         element.classList.add('fade-in');
     });
     
@@ -123,39 +127,60 @@ function addAnimationClasses() {
     const heroButton = document.querySelector('.hero-section .btn-cta');
     const heroImage = document.querySelector('.hero-img');
     
-    if (heroTitle) heroTitle.classList.add('fade-in');
+    if (heroTitle) heroTitle.classList.add('zoom-in');
     if (heroSubtitle) heroSubtitle.classList.add('fade-in');
-    if (heroButton) heroButton.classList.add('fade-in');
+    if (heroButton) heroButton.classList.add('slide-up');
     if (heroImage) heroImage.classList.add('slide-in-right');
     
     // About section elements
     const aboutBox = document.querySelector('.container-box');
     const aboutPoints = document.querySelectorAll('.about-point');
+    const aboutParagraphs = document.querySelectorAll('.about-paragraph');
     
     if (aboutBox) aboutBox.classList.add('slide-in-left');
     aboutPoints.forEach((point, index) => {
-        point.classList.add('fade-in');
+        point.classList.add('slide-up');
         // Add a delay to stagger the animations
         point.style.transitionDelay = `${index * 0.1}s`;
     });
     
+    aboutParagraphs.forEach((paragraph, index) => {
+        paragraph.classList.add('fade-in');
+        paragraph.style.transitionDelay = `${index * 0.1}s`;
+    });
+    
     // Service cards
     document.querySelectorAll('.service-card').forEach((card, index) => {
-        card.classList.add('fade-in');
+        card.classList.add('zoom-in');
         // Add a delay to stagger the animations
-        card.style.transitionDelay = `${index * 0.1}s`;
+        card.style.transitionDelay = `${index * 0.15}s`;
+    });
+    
+    // Service icons and titles
+    document.querySelectorAll('.learn-icon, .people-icon, .digital-icon').forEach(icon => {
+        icon.classList.add('slide-up');
+    });
+    
+    document.querySelectorAll('.service-title').forEach(title => {
+        title.classList.add('fade-in');
     });
     
     // Why choose us cards
     document.querySelectorAll('.trans-card').forEach((card, index) => {
-        card.classList.add('fade-in');
+        card.classList.add('slide-up');
         // Add a delay to stagger the animations
-        card.style.transitionDelay = `${index * 0.1}s`;
+        card.style.transitionDelay = `${index * 0.15}s`;
     });
     
     // Contact section elements
     const contactBox = document.querySelector('.contact-box');
-    if (contactBox) contactBox.classList.add('fade-in');
+    if (contactBox) contactBox.classList.add('zoom-in');
+    
+    // Contact form elements
+    document.querySelectorAll('.contact-form').forEach((input, index) => {
+        input.classList.add('fade-in');
+        input.style.transitionDelay = `${index * 0.1}s`;
+    });
     
     // Footer elements
     const footerColumns = document.querySelectorAll('.footer-section .col-lg-4, .footer-section .col-lg-2, .footer-section .col-lg-3');
@@ -200,6 +225,7 @@ function setupScrollSpy() {
         });
     });
 }
+
 
 /**
  * Setup scroll-to-top button functionality
