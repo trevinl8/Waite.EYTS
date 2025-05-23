@@ -125,7 +125,7 @@ ul{
 .navbar-nav > li > .dropdown-menu { 
     border-radius: 30px 0px 30px 30px;
     background-color: var(--transgreen-color);
-    opacity: 0;
+    opacity: 15;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -764,6 +764,8 @@ line-height: normal;
     background-color: var(--background-color);
     overflow: hidden;
     z-index: 1;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .page-header::before {
@@ -774,7 +776,7 @@ line-height: normal;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(6, 6, 39, 0.85), rgba(6, 6, 39, 0.85)), url('../imgs/hero-img.png');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -864,6 +866,176 @@ line-height: normal;
     color: rgba(217, 217, 217, 0.5);
     border-color: rgba(23, 212, 146, 0.3);
     background-color: transparent;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--background-color);
+}
+
+.testimonial-card {
+    border-radius: 30px;
+    background: rgba(23, 212, 146, 0.10);
+    padding: 50px;
+    margin: 20px 40px;
+    box-shadow: 0px 4px 15px 0px rgba(23, 212, 146, 0.30);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px 0px rgba(23, 212, 146, 0.40);
+}
+
+.testimonial-text {
+    color: var(--text-color);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.testimonial-text::before {
+    content: '"';
+    position: absolute;
+    left: -15px;
+    top: -20px;
+    font-size: 60px;
+    color: var(--primary-color);
+    opacity: 0.3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.author-name {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.author-role {
+    color: var(--secondary-color);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(23, 212, 146, 0.20);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(23, 212, 146, 0.40);
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Carousel Indicators */
+.testimonial-indicators {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.testimonial-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(23, 212, 146, 0.30);
+    border: none;
+    margin: 0 5px;
+}
+
+.testimonial-indicators .active {
+    background-color: var(--primary-color);
+}
+
+/* Responsive styles for testimonials */
+@media (max-width: 992px) {
+    .testimonial-card {
+        padding: 40px 30px;
+        margin: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 30px 20px;
+        margin: 10px 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+    }
+    
+    .author-name {
+        font-size: 20px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-card {
+        padding: 25px 15px;
+        margin: 10px;
+    }
+    
+    .testimonial-text {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    
+    .author-name {
+        font-size: 18px;
+    }
+    
+    .author-role {
+        font-size: 14px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 /* Article Post Styles */

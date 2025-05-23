@@ -172,6 +172,20 @@ function addAnimationClasses() {
         card.style.transitionDelay = `${index * 0.15}s`;
     });
     
+    // Testimonial section elements
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+        card.classList.add('zoom-in');
+    });
+    
+    document.querySelectorAll('.testimonial-text').forEach(text => {
+        text.classList.add('fade-in');
+    });
+    
+    document.querySelectorAll('.testimonial-author').forEach(author => {
+        author.classList.add('slide-up');
+    });
+    
     // Contact section elements
     const contactBox = document.querySelector('.contact-box');
     if (contactBox) contactBox.classList.add('zoom-in');
