@@ -233,9 +233,12 @@ ul{
 }
 
 .hero-img{
+    display: flex;
     width: 100%;
     height: auto;
     border-radius: 30px;
+    flex: 1;
+
 }
 
 .section-title{
@@ -395,7 +398,7 @@ ul{
   background-repeat: no-repeat;
 }
 .service-title{
-    color: var(--text-color);
+    color: var(--primary-color);
 font-family: 'Nunito Sans', sans-serif;
 font-size: 30px;
 font-style: normal;
@@ -1010,7 +1013,6 @@ line-height: normal;
         width: 40px;
         height: 40px;
     }
-}
 
 @media (max-width: 576px) {
     .testimonial-card {
@@ -1036,6 +1038,13 @@ line-height: normal;
         width: 35px;
         height: 35px;
     }
+      .container {
+    flex-direction: column;
+  }
+    .hero-img{
+        order: -1; /* Move the image to the top */
+    }
+}
 }
 
 /* Article Post Styles */
@@ -1058,6 +1067,13 @@ line-height: normal;
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
+}
+
+.article-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
 }
 
 .image-caption {
@@ -1296,6 +1312,7 @@ line-height: normal;
 @media (max-width: 768px) {
     .hero-title {
         font-size: 40px;
+        text-align: center;
     }
     
     .section-title {
@@ -1376,10 +1393,13 @@ line-height: normal;
 @media (max-width: 576px) {
     .hero-title {
         font-size: 32px;
+        text-align: center;
     }
     
     .hero-subtitle {
         font-size: 16px;
+        text-align: center;
+        padding: 10px 20px 10px 20px;
     }
     
     .section-title {
@@ -1391,7 +1411,8 @@ line-height: normal;
     }
     
     .btn-cta {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
     
     .sec-space {
@@ -1454,8 +1475,9 @@ line-height: normal;
     
     /* Ensure images are responsive */
     .hero-img, .choose-img, .article-featured-image img, .article-image img {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
+        margin: 20px 20px 20px 20px;
     }
     
     /* Improve navigation for mobile */
@@ -1512,6 +1534,13 @@ img:not([alt]) {
 .podcast-date {
     font-size: 14px;
     color: var(--secondary-color);
+}
+
+.podcast-guests {
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--secondary-color);
+    font-weight: 200;
 }
 
 .podcast-links a {
