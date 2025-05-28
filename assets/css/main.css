@@ -203,6 +203,7 @@ ul{
 }
 
 /* Hero Section */
+
 .hero-section{
     display: flex;
     flex-direction: column;
@@ -1032,6 +1033,7 @@ line-height: normal;
     .author-role {
         font-size: 14px;
     }
+
     
     .carousel-control-prev,
     .carousel-control-next {
@@ -1313,8 +1315,40 @@ line-height: normal;
     .hero-title {
         font-size: 40px;
         text-align: center;
+        margin-top: 20px;
     }
     
+    .card-img-top {
+        margin-bottom: 20px;
+        margin-left: 35%;
+    }
+
+    .profile-info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-paragraph {
+        padding: 0 20px;
+        
+    }
+    .container-box{
+        margin-bottom: 20px;
+    }
+  
+    .service-card {
+        padding: 20px;
+        margin: 10px;
+    }
+    .choose-img {
+        display: none;
+    }
+    .trans-card {
+        margin-left: 5%;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        display: none !important;
+    }
     .section-title {
         font-size: 30px;
     }
@@ -1343,10 +1377,38 @@ line-height: normal;
         padding-left: 20px;
     }
     
+    .contact-title{
+        text-align: center;
+    }
+    .contact-description{
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .footer-logo {
+        margin-left: 30%;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    .footer-heading, .footer-link{
+        display: none;
+    }
+    .nl-desc{
+        display: none;
+    }
+    .newsletter-form {
+        display:none;
+    }
     .container-box {
         padding: 30px;
     }
-    
+    .sec-space{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
     .trans-card {
         padding: 20px;
     }
